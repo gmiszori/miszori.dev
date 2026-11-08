@@ -44,7 +44,7 @@ Ein gemeinsamer Proxy vor den Apps protokolliert Verbindungen. Weil der ganze Ve
 - **Server-Log.** Der Webserver protokolliert jede Anfrage: Ihre IP-Adresse, die Uhrzeit, die Seite, Ihren Browser (User-Agent), die Seite, von der Sie kommen, und das Land, das Cloudflare meldet. Ich nutze das Log, um die App zu betreiben und Fehler oder Angriffe zu finden. Es ist auf 30 MB begrenzt; ist es voll, werden die ältesten Einträge automatisch gelöscht.
 - **Einstellungen und Favoriten** (Standorte, Ernährung, Allergene, Budget, Sprache, markierte Mensen und Gerichte) werden nur in Ihrem Browser (Local Storage) gespeichert und nie an den Server gesendet.
 - **Standort.** Wenn Sie die Mensen nach Entfernung sortieren, fragt Ihr Browser nach Ihrem Standort. Er wird nur in Ihrem Browser zur Berechnung der Entfernungen genutzt und nie gesendet oder gespeichert.
-- **Offline-Menüs.** Die App speichert die Menüs aller angebotenen Tage (bis zu zehn) mit ihren Fotos in Ihrem Browser, damit sie offline funktioniert. Sie enthalten keine Personendaten.
+- **Offline-Menüs.** Die App speichert die Menüs aller angebotenen Tage mit ihren Fotos in Ihrem Browser, damit sie offline funktioniert. Sie enthalten keine Personendaten.
 
 Rechtsgrundlage für das Log ist mein berechtigtes Interesse an einer sicheren, funktionierenden App (Art. 6 Abs. 1 lit. f DSGVO).
 

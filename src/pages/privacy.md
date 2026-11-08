@@ -44,7 +44,7 @@ A shared proxy in front of the apps logs connections, but because all traffic co
 - **Server log.** The web server logs each request: your IP address, the time, the page, your browser (User-Agent), the page you came from and the country Cloudflare reports. I use it to run the app and find errors or attacks. The log is limited to 30 MB, and the oldest entries are deleted automatically when it is full.
 - **Settings and favourites** (campuses, diet, allergens, budget, language, starred canteens and dishes) are stored only in your browser (local storage) and never sent to the server.
 - **Location.** If you sort canteens by distance, your browser asks for your location. It is used only in your browser to work out distances and is never sent or stored.
-- **Offline menus.** The app saves the menus of every day it offers (up to ten), with their photos, in your browser so it works offline. They contain no personal data.
+- **Offline menus.** The app saves the menus of every day it offers, with their photos, in your browser so it works offline. They contain no personal data.
 
 The legal basis for the log is my legitimate interest in a secure, working app (Art. 6(1)(f) GDPR).
 
