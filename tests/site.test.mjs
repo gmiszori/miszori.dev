@@ -12,6 +12,7 @@ const pages = [
   ['404.html', 'en', 'Page not found'],
   ['privacy/index.html', 'en', 'Privacy policy'],
   ['datenschutz/index.html', 'de', 'Datenschutzerklärung'],
+  ['security/index.html', 'en', 'Security policy'],
 ];
 
 for (const [path, lang, heading] of pages) {
@@ -166,6 +167,17 @@ test('every page links to the privacy policy, which links to its German version'
       '<meta property="og:locale" content="de_CH"'
     )
   );
+});
+
+// RFC 9116 wants Expires less than a year ahead, so this fails once it needs renewing.
+test('security.txt points to the policy and has not expired', () => {
+  const txt = readOutput('.well-known/security.txt');
+  assert.match(txt, /^Contact: mailto:gergo@miszori\.dev$/m);
+  assert.match(txt, /^Policy: https:\/\/miszori\.dev\/security\/$/m);
+  assert.match(txt, /^Canonical: https:\/\/miszori\.dev\/\.well-known\/security\.txt$/m);
+  const expires = new Date(txt.match(/^Expires: (.+)$/m)[1]);
+  assert.ok(expires > new Date(), 'security.txt has expired; set a new Expires date');
+  assert.ok(readOutput('security/index.html').includes('mailto:gergo@miszori.dev'));
 });
 
 test('legacy locale routes redirect permanently', () => {

@@ -1,5 +1,5 @@
 ---
-// Layout for the Markdown privacy pages (src/pages/privacy.md and datenschutz.md).
+// Layout for the Markdown policy pages (privacy.md, datenschutz.md and security.md in src/pages).
 import BaseLayout from './BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 
@@ -9,8 +9,8 @@ interface Props {
     description: string;
     lang: 'en' | 'de';
     updated: string;
-    // Link to the same page in the other language
-    other: { href: string; lang: 'en' | 'de'; label: string };
+    // Link to the same page in the other language, where there is one
+    other?: { href: string; lang: 'en' | 'de'; label: string };
   };
 }
 
@@ -22,9 +22,13 @@ const { title, description, lang, updated, other } = Astro.props.frontmatter;
     <SiteHeader />
 
     <article class="article">
-      <a href={other.href} class="tlink other" lang={other.lang}>
-        {other.label}
-      </a>
+      {
+        other && (
+          <a href={other.href} class="tlink other" lang={other.lang}>
+            {other.label}
+          </a>
+        )
+      }
       <h1 class="title">{title}</h1>
       <p class="updated">{updated}</p>
       <div class="prose">
