@@ -10,6 +10,8 @@ const pages = [
   ['index.html', 'en', 'Gergő Miszori'],
   ['notes/my-investing-strategy/index.html', 'en', 'My Investment Strategy'],
   ['404.html', 'en', 'Page not found'],
+  ['privacy/index.html', 'en', 'Privacy policy'],
+  ['datenschutz/index.html', 'de', 'Datenschutzerklärung'],
 ];
 
 for (const [path, lang, heading] of pages) {
@@ -152,6 +154,18 @@ test('pages share the large social preview image', () => {
 test('404 page is not indexed or listed in the sitemap', () => {
   assert.ok(readOutput('404.html').includes('content="noindex"'));
   assert.ok(!readOutput('sitemap-0.xml').includes('404'));
+});
+
+test('every page links to the privacy policy, which links to its German version', () => {
+  for (const [path] of pages) {
+    assert.ok(readOutput(path).includes('href="/privacy/"'), path);
+  }
+  assert.ok(readOutput('privacy/index.html').includes('href="/datenschutz/"'));
+  assert.ok(
+    readOutput('datenschutz/index.html').includes(
+      '<meta property="og:locale" content="de_CH"'
+    )
+  );
 });
 
 test('legacy locale routes redirect permanently', () => {
