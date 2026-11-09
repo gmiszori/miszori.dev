@@ -3,7 +3,7 @@ layout: ../layouts/LegalLayout.astro
 title: Privacy policy
 description: How miszori.dev, Mensaplan Zürich, amőba and vault handle personal data.
 lang: en
-updated: Last updated 8 November 2026
+updated: Last updated 9 November 2026
 other:
   href: /datenschutz/
   lang: de
@@ -12,7 +12,7 @@ other:
 
 This policy covers my website [miszori.dev](https://miszori.dev) and my apps [Mensaplan Zürich](https://mensa.miszori.dev), [amőba](https://amoeba.miszori.dev) and [vault](https://vault.miszori.dev). They are personal, non-commercial projects. I follow the Swiss Federal Act on Data Protection (FADP) and, where it applies, the EU General Data Protection Regulation (GDPR).
 
-In short: there are no accounts for visitors, no advertising, no tracking cookies, and I don't sell or share your data. Your settings stay in your browser.
+In short: there are no accounts for visitors, no advertising, no tracking cookies, and I don't sell or share your data. Your settings stay in your browser. Apart from vault's retrieval records, my servers write nothing about you to disk.
 
 ## Who is responsible
 
@@ -41,18 +41,16 @@ A shared proxy in front of the apps logs connections, but because all traffic co
 
 ## Mensaplan Zürich
 
-- **Server log.** The web server logs each request: your IP address, the time, the page, your browser (User-Agent), the page you came from and the country Cloudflare reports. I use it to run the app and find errors or attacks. The log is limited to 30 MB, and the oldest entries are deleted automatically when it is full.
+- **Server log.** The web server logs each request with the time, the page, the result and how long it took, so I can run the app and find errors or attacks. It doesn't log your IP address, your browser, the page you came from or any other detail about you.
 - **Settings and favourites** (campuses, diet, allergens, budget, language, starred canteens and dishes) are stored only in your browser (local storage) and never sent to the server.
 - **Location.** If you sort canteens by distance, your browser asks for your location. It is used only in your browser to work out distances and is never sent or stored.
 - **Offline menus.** The app saves the menus of every day it offers, with their photos, in your browser so it works offline. They contain no personal data.
-
-The legal basis for the log is my legitimate interest in a secure, working app (Art. 6(1)(f) GDPR).
 
 ## amőba
 
 - **Username.** To play online you choose a username. It is shown to the other players in your games and rooms, and checked against a list of offensive words.
 - **Game data.** Your session, rooms and moves are kept only in the server's memory and never written to disk. A session is deleted 10 minutes after you leave (1 minute if you never chose a name), and everything is gone when the server restarts.
-- **IP address.** The server keeps your IP address in memory while you are connected, to limit how many connections and new sessions one address can open. It is not logged or stored.
+- **IP address.** The server keeps your IP address in memory while you are connected, and for up to a minute after you start a session, to limit how many connections and new sessions one address can open. It is not logged or stored.
 - **Your browser** keeps your username and a session token (local storage), so you can reconnect to a game.
 - Games against Amőbot and on the same device run entirely in your browser and send nothing to the server.
 
@@ -68,13 +66,17 @@ I use vault to share files and text with specific people.
 
 The legal basis is my legitimate interest in sharing files securely and knowing whether they arrived (Art. 6(1)(f) GDPR).
 
+## Email
+
+When you write to me, Cloudflare Email Routing forwards your email to my Gmail mailbox, and I reply from there. Google (Google LLC, USA) stores the emails in my account under its own terms; how Google handles them is described in [Google's privacy policy](https://policies.google.com/privacy). Google is certified under the EU–US and Swiss–US Data Privacy Frameworks. I use your address and message only to answer you and, for requests about your rights and security reports, to keep a record of how I handled them. I keep emails as long as I need them for that, then delete them. The legal basis is my legitimate interest in answering you (Art. 6(1)(f) GDPR) and, for requests about your rights, my legal obligation to handle them (Art. 6(1)(c) GDPR).
+
 ## Cookies and browser storage
 
 None of these sites set cookies. Mensaplan Zürich, amőba and miszori.dev (for the light or dark theme) store settings in your browser's local storage only so the site works as you set it up. You can delete them at any time in your browser's settings for the site.
 
 ## Who receives data
 
-Only Cloudflare and my hosting provider, as described above, and only on my behalf. I don't sell data or pass it on, unless the law requires me to.
+Cloudflare and my hosting provider, on my behalf, as described above; Google, for emails you send me; and the other players, who see your amőba username. I don't sell data or pass it on, unless the law requires me to.
 
 ## Do you have to provide data?
 
@@ -84,7 +86,9 @@ No. But without your IP address and the technical request data, the sites can't 
 
 You can ask me for access to your data, and have it corrected, deleted or restricted. You can ask for your data in a portable format. These rights come from the GDPR (Art. 15–20) and the FADP. Send your request to [gergo@miszori.dev](mailto:gergo@miszori.dev). It is free.
 
-To find log entries or retrieval records about you, I need details such as your IP address and the time of your visit, because I can't otherwise tell which entries are yours.
+Apart from vault's retrieval records and emails you send me, I keep no data that I could link to you. To find a retrieval record, I need details such as your IP address and the time you opened the package, because I can't otherwise tell which records are yours.
+
+I only give out data when you can show that it is about you. Many people can share one IP address, and anyone can claim one, so an IP address alone is not proof. If you can't show that the data you ask for is yours, I won't give it out, because it could be someone else's (Art. 12(6) and 15(4) GDPR, Art. 26 FADP).
 
 You can also complain to a supervisory authority: in Switzerland the [Federal Data Protection and Information Commissioner (FDPIC)](https://www.edoeb.admin.ch), in the EU the authority of the country where you live or work.
 

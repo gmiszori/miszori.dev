@@ -3,7 +3,7 @@ layout: ../layouts/LegalLayout.astro
 title: Datenschutzerklärung
 description: Wie miszori.dev, Mensaplan Zürich, amőba und vault mit Personendaten umgehen.
 lang: de
-updated: Stand 8. November 2026
+updated: Stand 9. November 2026
 other:
   href: /privacy/
   lang: en
@@ -12,7 +12,7 @@ other:
 
 Diese Erklärung gilt für meine Website [miszori.dev](https://miszori.dev) und meine Apps [Mensaplan Zürich](https://mensa.miszori.dev), [amőba](https://amoeba.miszori.dev) und [vault](https://vault.miszori.dev). Es sind private, nicht kommerzielle Projekte. Ich halte mich an das Schweizer Datenschutzgesetz (DSG) und, soweit sie anwendbar ist, an die EU-Datenschutz-Grundverordnung (DSGVO).
 
-Kurz gesagt: Es gibt keine Konten für Besucherinnen und Besucher, keine Werbung und keine Tracking-Cookies, und ich verkaufe oder teile Ihre Daten nicht. Ihre Einstellungen bleiben in Ihrem Browser.
+Kurz gesagt: Es gibt keine Konten für Besucherinnen und Besucher, keine Werbung und keine Tracking-Cookies, und ich verkaufe oder teile Ihre Daten nicht. Ihre Einstellungen bleiben in Ihrem Browser. Ausser den Abrufprotokollen von vault schreiben meine Server nichts über Sie auf die Festplatte.
 
 ## Verantwortlicher
 
@@ -41,18 +41,16 @@ Ein gemeinsamer Proxy vor den Apps protokolliert Verbindungen. Weil der ganze Ve
 
 ## Mensaplan Zürich
 
-- **Server-Log.** Der Webserver protokolliert jede Anfrage: Ihre IP-Adresse, die Uhrzeit, die Seite, Ihren Browser (User-Agent), die Seite, von der Sie kommen, und das Land, das Cloudflare meldet. Ich nutze das Log, um die App zu betreiben und Fehler oder Angriffe zu finden. Es ist auf 30 MB begrenzt; ist es voll, werden die ältesten Einträge automatisch gelöscht.
+- **Server-Log.** Der Webserver protokolliert jede Anfrage mit der Uhrzeit, der Seite, dem Ergebnis und der Dauer, damit ich die App betreiben und Fehler oder Angriffe finden kann. Ihre IP-Adresse, Ihren Browser, die Seite, von der Sie kommen, und andere Angaben zu Ihnen protokolliert er nicht.
 - **Einstellungen und Favoriten** (Standorte, Ernährung, Allergene, Budget, Sprache, markierte Mensen und Gerichte) werden nur in Ihrem Browser (Local Storage) gespeichert und nie an den Server gesendet.
 - **Standort.** Wenn Sie die Mensen nach Entfernung sortieren, fragt Ihr Browser nach Ihrem Standort. Er wird nur in Ihrem Browser zur Berechnung der Entfernungen genutzt und nie gesendet oder gespeichert.
 - **Offline-Menüs.** Die App speichert die Menüs aller angebotenen Tage mit ihren Fotos in Ihrem Browser, damit sie offline funktioniert. Sie enthalten keine Personendaten.
-
-Rechtsgrundlage für das Log ist mein berechtigtes Interesse an einer sicheren, funktionierenden App (Art. 6 Abs. 1 lit. f DSGVO).
 
 ## amőba
 
 - **Benutzername.** Um online zu spielen, wählen Sie einen Benutzernamen. Er wird den anderen Spielerinnen und Spielern in Ihren Spielen und Räumen angezeigt und mit einer Liste anstössiger Wörter abgeglichen.
 - **Spieldaten.** Ihre Sitzung, Räume und Züge werden nur im Arbeitsspeicher des Servers gehalten und nie auf die Festplatte geschrieben. Eine Sitzung wird 10 Minuten nach dem Verlassen gelöscht (1 Minute, wenn Sie nie einen Namen gewählt haben); bei einem Neustart des Servers ist alles weg.
-- **IP-Adresse.** Solange Sie verbunden sind, hält der Server Ihre IP-Adresse im Arbeitsspeicher, um zu begrenzen, wie viele Verbindungen und neue Sitzungen eine Adresse öffnen kann. Sie wird weder protokolliert noch gespeichert.
+- **IP-Adresse.** Solange Sie verbunden sind, und bis zu einer Minute nach dem Start einer Sitzung, hält der Server Ihre IP-Adresse im Arbeitsspeicher, um zu begrenzen, wie viele Verbindungen und neue Sitzungen eine Adresse öffnen kann. Sie wird weder protokolliert noch gespeichert.
 - **Ihr Browser** speichert Ihren Benutzernamen und ein Sitzungstoken (Local Storage), damit Sie sich wieder mit einem Spiel verbinden können.
 - Spiele gegen Amőbot und auf demselben Gerät laufen vollständig in Ihrem Browser und senden nichts an den Server.
 
@@ -68,13 +66,17 @@ Mit vault teile ich Dateien und Texte mit bestimmten Personen.
 
 Rechtsgrundlage ist mein berechtigtes Interesse, Dateien sicher zu teilen und zu wissen, ob sie angekommen sind (Art. 6 Abs. 1 lit. f DSGVO).
 
+## E-Mail
+
+Wenn Sie mir schreiben, leitet Cloudflare Email Routing Ihre E-Mail an mein Gmail-Postfach weiter, und ich antworte von dort. Google (Google LLC, USA) speichert die E-Mails in meinem Konto nach seinen eigenen Bedingungen; wie Google mit ihnen umgeht, steht in der [Datenschutzerklärung von Google](https://policies.google.com/privacy?hl=de). Google ist unter dem EU-US- und dem Swiss-US Data Privacy Framework zertifiziert. Ich nutze Ihre Adresse und Ihre Nachricht nur, um Ihnen zu antworten und bei Anfragen zu Ihren Rechten und Sicherheitsmeldungen festzuhalten, wie ich sie bearbeitet habe. Ich bewahre E-Mails so lange auf, wie ich sie dafür brauche, und lösche sie dann. Rechtsgrundlage ist mein berechtigtes Interesse, Ihnen zu antworten (Art. 6 Abs. 1 lit. f DSGVO), und bei Anfragen zu Ihren Rechten meine rechtliche Pflicht, sie zu bearbeiten (Art. 6 Abs. 1 lit. c DSGVO).
+
 ## Cookies und Browserspeicher
 
 Keine dieser Websites setzt Cookies. Mensaplan Zürich, amőba und miszori.dev (für das helle oder dunkle Design) speichern Einstellungen im Local Storage Ihres Browsers, nur damit die Website so funktioniert, wie Sie sie eingestellt haben. Sie können sie jederzeit in den Website-Einstellungen Ihres Browsers löschen.
 
 ## Wer Daten erhält
 
-Nur Cloudflare und mein Hosting-Anbieter, wie oben beschrieben, und nur in meinem Auftrag. Ich verkaufe keine Daten und gebe sie nicht weiter, ausser das Gesetz verpflichtet mich dazu.
+Cloudflare und mein Hosting-Anbieter in meinem Auftrag, wie oben beschrieben; Google für E-Mails, die Sie mir schicken; und die anderen Spielerinnen und Spieler, die Ihren amőba-Benutzernamen sehen. Ich verkaufe keine Daten und gebe sie nicht weiter, ausser das Gesetz verpflichtet mich dazu.
 
 ## Müssen Sie Daten angeben?
 
@@ -84,7 +86,9 @@ Nein. Ohne Ihre IP-Adresse und die technischen Anfragedaten können die Websites
 
 Sie können Auskunft über Ihre Daten verlangen und sie berichtigen, löschen oder einschränken lassen. Sie können Ihre Daten in einem übertragbaren Format verlangen. Diese Rechte ergeben sich aus der DSGVO (Art. 15–20) und dem DSG. Senden Sie Ihre Anfrage an [gergo@miszori.dev](mailto:gergo@miszori.dev); sie ist kostenlos.
 
-Um Log-Einträge oder Abrufprotokolle zu Ihnen zu finden, brauche ich Angaben wie Ihre IP-Adresse und die Zeit Ihres Besuchs, weil ich sonst nicht erkennen kann, welche Einträge Ihre sind.
+Ausser den Abrufprotokollen von vault und E-Mails, die Sie mir schicken, bewahre ich keine Daten auf, die ich Ihnen zuordnen könnte. Um ein Abrufprotokoll zu Ihnen zu finden, brauche ich Angaben wie Ihre IP-Adresse und die Zeit, zu der Sie das Paket geöffnet haben, weil ich sonst nicht erkennen kann, welche Einträge Ihre sind.
+
+Ich gebe Daten nur heraus, wenn Sie zeigen können, dass sie Sie betreffen. Viele Menschen können sich eine IP-Adresse teilen, und jede Person kann eine angeben; eine IP-Adresse allein ist deshalb kein Nachweis. Können Sie nicht zeigen, dass die verlangten Daten Ihre sind, gebe ich sie nicht heraus, weil sie jemand anderem gehören könnten (Art. 12 Abs. 6 und Art. 15 Abs. 4 DSGVO, Art. 26 DSG).
 
 Sie können sich auch bei einer Aufsichtsbehörde beschweren: in der Schweiz beim [Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB)](https://www.edoeb.admin.ch), in der EU bei der Behörde des Landes, in dem Sie wohnen oder arbeiten.
 
