@@ -13,3 +13,6 @@ minimumReleaseAgeExclude:
 # satori pins fflate 0.7.3, which has GHSA-px8p-9vwx-vf98; drop once satori updates
 overrides:
   'fflate@<0.7.5': 0.7.5
+  # Some packages accept an @emnapi/runtime 2.0 beta as a peer; with it,
+  # @astrojs/check fails to load and `astro check` breaks. Stay on 1.x.
+  '@emnapi/runtime': ^1.11.3
